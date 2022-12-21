@@ -1,5 +1,8 @@
 $(document).ready(function(){
-
+    $('botao-Enviar').click(function() {
+      $("ul").append("<li>" + value + "</li>");
+      $('#nova-tarefa').val('');
+    })
   
     $("#botao-limpar").click(function() {
       $("").empty();
@@ -9,10 +12,6 @@ $(document).ready(function(){
       e.preventDefault();
       const novaTarefa = $('#nova-tarefa').val();
       const novoItem = $('<li></li>')
-      $('botao-Enviar').click(function() {
-        $("ul").append("<li>" + value + "</li>");
-        $('#nova-tarefa').val('');
-      })
       $(`<li> ${novaTarefa}</li>`).appendTo(novoItem);
       $(novoItem).appendTo('ul');
       $('#nova-tarefa').val('');
